@@ -1,11 +1,15 @@
 Script [1:0..3:0]
- ├─ CompoundStatement [1:0..2:0]
- │   └─ UnaryOperatorNode [1:0..1:5]
- │       ├─ ArithOp [1:0..1:1]: "!"
- │       └─ LiteralExpressionNode [1:1..1:5]
- │           └─ True [1:1..1:5]: "true"
- └─ CompoundStatement [2:0..3:0]
-     └─ UnaryOperatorNode [2:0..2:8]
-         ├─ NotOp [2:0..2:3]: "not"
-         └─ LiteralExpressionNode [2:4..2:8]
-             └─ True [2:4..2:8]: "true"
+ ├─ SimpleStatement [1:0..2:0]
+ │   ├─ SmallStatement [1:0..1:5]
+ │   │   └─ UnaryOperatorNode [1:0..1:5]
+ │   │       ├─ ArithOp [1:0..1:1]: "!"
+ │   │       └─ LiteralExpressionNode [1:1..1:5]
+ │   │           └─ True [1:1..1:5]: "true"
+ │   └─ Newline [1:5..2:0]: "\n"
+ └─ SimpleStatement [2:0..3:0]
+     ├─ SmallStatement [2:0..2:8]
+     │   └─ UnaryOperatorNode [2:0..2:8]
+     │       ├─ NotOp [2:0..2:3]: "not"
+     │       └─ LiteralExpressionNode [2:4..2:8]
+     │           └─ True [2:4..2:8]: "true"
+     └─ Newline [2:8..3:0]: "\n"

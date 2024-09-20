@@ -5,7 +5,13 @@ Script [1:0..3:0]
          ├─ Identifier [1:6..1:11]: "Hello"
          └─ Body [1:11..3:0]
              ├─ : [1:11..1:12]: ":"
-             └─ SuiteNode [2:0..3:0]
-                 └─ SimpleStatement [2:1..3:0]
-                     └─ PassStatement [2:1..2:5]
-                         └─ pass [2:1..2:5]: "pass"
+             └─ SuiteNodeBody [1:12..3:0]
+                 ├─ Newline [1:12..2:0]: "\n"
+                 └─ SuiteNode [2:0..3:0]
+                     ├─ Indent [2:0..2:1]: "\t"
+                     ├─ SimpleStatement [2:1..3:0]
+                     │   ├─ SmallStatement [2:1..2:5]
+                     │   │   └─ PassStatement [2:1..2:5]
+                     │   │       └─ pass [2:1..2:5]: "pass"
+                     │   └─ Newline [2:5..3:0]: "\n"
+                     └─ Dedent 3:0

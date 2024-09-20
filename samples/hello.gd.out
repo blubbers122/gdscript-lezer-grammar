@@ -1,29 +1,40 @@
 Script [1:0..6:0]
  ├─ SimpleStatement [1:0..2:0]
- │   └─ ExtendsStatement [1:0..1:12]
- │       ├─ extends [1:0..1:7]: "extends"
- │       └─ Identifier [1:8..1:12]: "Node"
+ │   ├─ SmallStatement [1:0..1:12]
+ │   │   └─ ExtendsStatement [1:0..1:12]
+ │   │       ├─ extends [1:0..1:7]: "extends"
+ │   │       └─ Identifier [1:8..1:12]: "Node"
+ │   └─ Newline [1:12..2:0]: "\n"
  ├─ SimpleStatement [2:0..3:0]
- │   └─ ClassNameStatement [2:0..2:16]
- │       ├─ class_name [2:0..2:10]: "class_name"
- │       └─ Identifier [2:11..2:16]: "Hello"
- └─ CompoundStatement [4:0..5:22]
-     └─ FunctionNode [4:0..5:22]
+ │   ├─ SmallStatement [2:0..2:16]
+ │   │   └─ ClassNameStatement [2:0..2:16]
+ │   │       ├─ class_name [2:0..2:10]: "class_name"
+ │   │       └─ Identifier [2:11..2:16]: "Hello"
+ │   └─ Newline [2:16..3:0]: "\n"
+ └─ CompoundStatement [4:0..6:0]
+     └─ FunctionNode [4:0..6:0]
          ├─ func [4:0..4:4]: "func"
-         ├─ ⚠ [4:5..4:6]: "_"
-         ├─ Identifier [4:6..4:11]: "ready"
-         ├─ CallParams [4:11..4:13]
+         ├─ Identifier [4:5..4:11]: "_ready"
+         ├─ CallParamsParameterNode [4:11..4:13]
          │   ├─ ( [4:11..4:12]: "("
          │   └─ ) [4:12..4:13]: ")"
          ├─ FunctionReturnType [4:14..4:21]
+         │   ├─ FunctionReturnPointer [4:14..4:16]: "->"
          │   └─ Type [4:17..4:21]
          │       └─ Identifier [4:17..4:21]: "void"
-         └─ Body [4:21..5:22]
+         └─ Body [4:21..6:0]
              ├─ : [4:21..4:22]: ":"
-             └─ CallExpressionNode [5:1..5:22]
-                 ├─ Identifier [5:1..5:6]: "print"
-                 └─ CallParams [5:6..5:22]
-                     ├─ ( [5:6..5:7]: "("
-                     ├─ LiteralExpressionNode [5:7..5:21]
-                     │   └─ String [5:7..5:21]: "\"hello, world\""
-                     └─ ) [5:21..5:22]: ")"
+             └─ SuiteNodeBody [4:22..6:0]
+                 ├─ Newline [4:22..5:0]: "\n"
+                 └─ SuiteNode [5:0..6:0]
+                     ├─ Indent [5:0..5:1]: "\t"
+                     ├─ SimpleStatement [5:1..6:0]
+                     │   ├─ SmallStatement [5:1..5:22]
+                     │   │   └─ CallExpressionNode [5:1..5:22]
+                     │   │       ├─ Identifier [5:1..5:6]: "print"
+                     │   │       └─ CallParamsExpressionNode [5:6..5:22]
+                     │   │           ├─ ( [5:6..5:7]: "("
+                     │   │           ├─ ⚠ [5:7..5:21]: "\"hello, world\""
+                     │   │           └─ ) [5:21..5:22]: ")"
+                     │   └─ Newline [5:22..6:0]: "\n"
+                     └─ Dedent 6:0

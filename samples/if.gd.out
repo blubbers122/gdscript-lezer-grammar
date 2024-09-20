@@ -1,15 +1,18 @@
 Script [1:0..5:0]
- ├─ CompoundStatement [1:0..3:0]
- │   ├─ IfNode [1:0..3:0]
- │   │   └─ IfClause [1:0..2:0]
- │   │       ├─ if [1:0..1:2]: "if"
- │   │       ├─ LiteralExpressionNode [1:3..1:7]
- │   │       │   └─ True [1:3..1:7]: "true"
- │   │       └─ Body [1:7..2:0]
- │   │           ├─ : [1:7..1:8]: ":"
- │   │           └─ LiteralExpressionNode [1:9..1:14]
- │   │               └─ False [1:9..1:14]: "false"
- │   └─ ⚠ 3:0
+ ├─ CompoundStatement [1:0..2:0]
+ │   └─ IfNode [1:0..2:0]
+ │       └─ IfClause [1:0..2:0]
+ │           ├─ if [1:0..1:2]: "if"
+ │           ├─ LiteralExpressionNode [1:3..1:7]
+ │           │   └─ True [1:3..1:7]: "true"
+ │           └─ Body [1:7..2:0]
+ │               ├─ : [1:7..1:8]: ":"
+ │               └─ ExpressionNodeBody [1:9..2:0]
+ │                   └─ SimpleStatement [1:9..2:0]
+ │                       ├─ SmallStatement [1:9..1:14]
+ │                       │   └─ LiteralExpressionNode [1:9..1:14]
+ │                       │       └─ False [1:9..1:14]: "false"
+ │                       └─ Newline [1:14..2:0]: "\n"
  └─ CompoundStatement [3:0..5:0]
      └─ IfNode [3:0..5:0]
          └─ IfClause [3:0..5:0]
@@ -18,7 +21,13 @@ Script [1:0..5:0]
              │   └─ True [3:3..3:7]: "true"
              └─ Body [3:7..5:0]
                  ├─ : [3:7..3:8]: ":"
-                 └─ SuiteNode [4:0..5:0]
-                     └─ CompoundStatement [4:1..5:0]
-                         └─ LiteralExpressionNode [4:1..4:6]
-                             └─ False [4:1..4:6]: "false"
+                 └─ SuiteNodeBody [3:8..5:0]
+                     ├─ Newline [3:8..4:0]: "\n"
+                     └─ SuiteNode [4:0..5:0]
+                         ├─ Indent [4:0..4:1]: "\t"
+                         ├─ SimpleStatement [4:1..5:0]
+                         │   ├─ SmallStatement [4:1..4:6]
+                         │   │   └─ LiteralExpressionNode [4:1..4:6]
+                         │   │       └─ False [4:1..4:6]: "false"
+                         │   └─ Newline [4:6..5:0]: "\n"
+                         └─ Dedent 5:0

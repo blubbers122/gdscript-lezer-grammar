@@ -1,0 +1,49 @@
+Script [1:0..8:0]
+ ├─ SimpleStatement [1:0..2:0]
+ │   ├─ SmallStatement [1:0..1:7]
+ │   │   └─ StandaloneAnnotationNode [1:0..1:7]
+ │   │       └─ AnnotationNode [1:0..1:7]
+ │   │           ├─ @ [1:0..1:1]: "@"
+ │   │           └─ Identifier [1:1..1:7]: "export"
+ │   └─ Newline [1:7..2:0]: "\n"
+ ├─ SimpleStatement [2:0..3:0]
+ │   ├─ SmallStatement [2:0..2:9]
+ │   │   └─ StandaloneAnnotationNode [2:0..2:9]
+ │   │       └─ AnnotationNode [2:0..2:9]
+ │   │           ├─ @ [2:0..2:1]: "@"
+ │   │           ├─ Identifier [2:1..2:7]: "export"
+ │   │           └─ CallParamsLiteralExpressionNode [2:7..2:9]
+ │   │               ├─ ( [2:7..2:8]: "("
+ │   │               └─ ) [2:8..2:9]: ")"
+ │   └─ Newline [2:9..3:0]: "\n"
+ ├─ SimpleStatement [4:0..5:0]
+ │   ├─ SmallStatement [4:0..4:25]
+ │   │   └─ StandaloneAnnotationNode [4:0..4:25]
+ │   │       └─ AnnotationNode [4:0..4:25]
+ │   │           ├─ @ [4:0..4:1]: "@"
+ │   │           ├─ Identifier [4:1..4:13]: "export_range"
+ │   │           └─ CallParamsLiteralExpressionNode [4:13..4:25]
+ │   │               ├─ ( [4:13..4:14]: "("
+ │   │               ├─ LiteralExpressionNode [4:14..4:15]: "0"
+ │   │               ├─ , [4:15..4:16]: ","
+ │   │               ├─ LiteralExpressionNode [4:17..4:20]: "1.0"
+ │   │               ├─ , [4:20..4:21]: ","
+ │   │               ├─ LiteralExpressionNode [4:22..4:24]: ".1"
+ │   │               └─ ) [4:24..4:25]: ")"
+ │   └─ Newline [4:25..5:0]: "\n"
+ └─ SimpleStatement [6:0..7:0]
+     ├─ SmallStatement [6:0..6:22]
+     │   └─ AssignmentExpressionNode [6:0..6:22]
+     │       ├─ VariableNode [6:0..6:18]
+     │       │   ├─ AnnotationNode [6:0..6:7]
+     │       │   │   ├─ @ [6:0..6:1]: "@"
+     │       │   │   └─ Identifier [6:1..6:7]: "export"
+     │       │   ├─ var [6:8..6:11]: "var"
+     │       │   ├─ Identifier [6:12..6:13]: "a"
+     │       │   └─ TypeCast [6:13..6:18]
+     │       │       ├─ : [6:13..6:14]: ":"
+     │       │       └─ Type [6:15..6:18]
+     │       │           └─ Identifier [6:15..6:18]: "int"
+     │       ├─ Equal [6:19..6:20]: "="
+     │       └─ LiteralExpressionNode [6:21..6:22]: "1"
+     └─ Newline [6:22..7:0]: "\n"

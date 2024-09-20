@@ -4,67 +4,87 @@ Script [1:0..10:0]
          ├─ match [1:0..1:5]: "match"
          ├─ Identifier [1:6..1:16]: "HelloWorld"
          ├─ : [1:16..1:17]: ":"
-         ├─ MatchBranchNode [2:1..8:1]
+         ├─ Newline [1:17..2:0]: "\n"
+         ├─ Indent [2:0..2:1]: "\t"
+         ├─ MatchBranchNode [2:1..4:0]
          │   ├─ PatternNode [2:1..2:2]
          │   │   └─ LiteralPatternNode [2:1..2:2]
          │   │       └─ LiteralExpressionNode [2:1..2:2]: "1"
-         │   └─ Body [2:2..8:1]
+         │   └─ Body [2:2..4:0]
          │       ├─ : [2:2..2:3]: ":"
-         │       └─ SuiteNode [3:0..8:1]
-         │           ├─ ⚠ 3:0
-         │           ├─ CompoundStatement [3:2..4:0]
-         │           │   └─ CallExpressionNode [3:2..3:15]
-         │           │       ├─ Identifier [3:2..3:7]: "print"
-         │           │       └─ CallParams [3:7..3:15]
-         │           │           ├─ ( [3:7..3:8]: "("
-         │           │           ├─ LiteralExpressionNode [3:8..3:14]
-         │           │           │   └─ String [3:8..3:14]: "\"yay!\""
-         │           │           └─ ) [3:14..3:15]: ")"
-         │           ├─ CompoundStatement [4:0..8:0]
-         │           │   └─ GroupedExpressionNode [4:0..7:22]
-         │           │       ├─ ⚠ 4:0
-         │           │       ├─ AssignmentExpressionNode [4:1..7:21]
-         │           │       │   ├─ ParameterNode [4:1..5:7]
-         │           │       │   │   ├─ Identifier [4:1..4:9]: "MY_CONST"
-         │           │       │   │   └─ TypeCast [4:9..5:7]
-         │           │       │   │       ├─ : [4:9..4:10]: ":"
-         │           │       │   │       └─ Type [5:2..5:7]
-         │           │       │   │           └─ Identifier [5:2..5:7]: "print"
-         │           │       │   ├─ ⚠ 5:7
-         │           │       │   └─ BinaryOperatorExpressionNode [5:7..7:21]
-         │           │       │       ├─ GroupedExpressionNode [5:7..5:16]
-         │           │       │       │   ├─ ( [5:7..5:8]: "("
-         │           │       │       │   ├─ LiteralExpressionNode [5:8..5:15]
-         │           │       │       │   │   └─ String [5:8..5:15]: "\"ok ok\""
-         │           │       │       │   └─ ) [5:15..5:16]: ")"
-         │           │       │       ├─ ⚠ [6:1..6:4]
-         │           │       │       │   └─ var [6:1..6:4]: "var"
-         │           │       │       ├─ ⚠ 6:5
-         │           │       │       └─ AssignmentExpressionNode [6:5..7:21]
-         │           │       │           ├─ ParameterNode [6:5..7:7]
-         │           │       │           │   ├─ Identifier [6:5..6:8]: "hey"
-         │           │       │           │   └─ TypeCast [6:8..7:7]
-         │           │       │           │       ├─ : [6:8..6:9]: ":"
-         │           │       │           │       └─ Type [7:2..7:7]
-         │           │       │           │           └─ Identifier [7:2..7:7]: "print"
-         │           │       │           ├─ ⚠ [7:7..7:21]
-         │           │       │           │   └─ ( [7:7..7:8]: "("
-         │           │       │           ├─ ⚠ 7:8
-         │           │       │           └─ LiteralExpressionNode [7:8..7:21]
-         │           │       │               └─ String [7:8..7:21]: "\"hey, a var!\""
-         │           │       └─ ) [7:21..7:22]: ")"
-         │           └─ ⚠ [8:0..8:2]: "\t_"
-         └─ MatchBranchNode [8:1..10:0]
-             ├─ PatternNode [8:1..8:2]
-             │   └─ WildcardPatternNode [8:1..8:2]: "_"
-             └─ Body [8:2..10:0]
-                 ├─ : [8:2..8:3]: ":"
-                 └─ SuiteNode [9:0..10:0]
-                     └─ CompoundStatement [9:2..10:0]
-                         └─ CallExpressionNode [9:2..9:19]
-                             ├─ Identifier [9:2..9:7]: "print"
-                             └─ CallParams [9:7..9:19]
-                                 ├─ ( [9:7..9:8]: "("
-                                 ├─ LiteralExpressionNode [9:8..9:18]
-                                 │   └─ String [9:8..9:18]: "\"default!\""
-                                 └─ ) [9:18..9:19]: ")"
+         │       └─ SuiteNodeBody [2:3..4:0]
+         │           ├─ Newline [2:3..3:0]: "\n"
+         │           └─ SuiteNode [3:0..4:0]
+         │               ├─ Indent [3:0..3:2]: "\t\t"
+         │               ├─ SimpleStatement [3:2..4:0]
+         │               │   ├─ SmallStatement [3:2..3:15]
+         │               │   │   └─ CallExpressionNode [3:2..3:15]
+         │               │   │       ├─ Identifier [3:2..3:7]: "print"
+         │               │   │       └─ CallParamsExpressionNode [3:7..3:15]
+         │               │   │           ├─ ( [3:7..3:8]: "("
+         │               │   │           ├─ ⚠ [3:8..3:14]: "\"yay!\""
+         │               │   │           └─ ) [3:14..3:15]: ")"
+         │               │   └─ Newline [3:15..4:0]: "\n"
+         │               └─ Dedent 4:0
+         ├─ MatchBranchNode [4:1..6:0]
+         │   ├─ PatternNode [4:1..4:9]
+         │   │   └─ IdentifierPatternNode [4:1..4:9]
+         │   │       └─ Identifier [4:1..4:9]: "MY_CONST"
+         │   └─ Body [4:9..6:0]
+         │       ├─ : [4:9..4:10]: ":"
+         │       └─ SuiteNodeBody [4:10..6:0]
+         │           ├─ Newline [4:10..5:0]: "\n"
+         │           └─ SuiteNode [5:0..6:0]
+         │               ├─ Indent [5:0..5:2]: "\t\t"
+         │               ├─ SimpleStatement [5:2..6:0]
+         │               │   ├─ SmallStatement [5:2..5:16]
+         │               │   │   └─ CallExpressionNode [5:2..5:16]
+         │               │   │       ├─ Identifier [5:2..5:7]: "print"
+         │               │   │       └─ CallParamsExpressionNode [5:7..5:16]
+         │               │   │           ├─ ( [5:7..5:8]: "("
+         │               │   │           ├─ ⚠ [5:8..5:15]: "\"ok ok\""
+         │               │   │           └─ ) [5:15..5:16]: ")"
+         │               │   └─ Newline [5:16..6:0]: "\n"
+         │               └─ Dedent 6:0
+         ├─ MatchBranchNode [6:1..8:0]
+         │   ├─ PatternNode [6:1..6:8]
+         │   │   └─ VarPatternNode [6:1..6:8]
+         │   │       ├─ var [6:1..6:4]: "var"
+         │   │       └─ Identifier [6:5..6:8]: "hey"
+         │   └─ Body [6:8..8:0]
+         │       ├─ : [6:8..6:9]: ":"
+         │       └─ SuiteNodeBody [6:9..8:0]
+         │           ├─ Newline [6:9..7:0]: "\n"
+         │           └─ SuiteNode [7:0..8:0]
+         │               ├─ Indent [7:0..7:2]: "\t\t"
+         │               ├─ SimpleStatement [7:2..8:0]
+         │               │   ├─ SmallStatement [7:2..7:22]
+         │               │   │   └─ CallExpressionNode [7:2..7:22]
+         │               │   │       ├─ Identifier [7:2..7:7]: "print"
+         │               │   │       └─ CallParamsExpressionNode [7:7..7:22]
+         │               │   │           ├─ ( [7:7..7:8]: "("
+         │               │   │           ├─ ⚠ [7:8..7:21]: "\"hey, a var!\""
+         │               │   │           └─ ) [7:21..7:22]: ")"
+         │               │   └─ Newline [7:22..8:0]: "\n"
+         │               └─ Dedent 8:0
+         ├─ MatchBranchNode [8:1..10:0]
+         │   ├─ PatternNode [8:1..8:2]
+         │   │   └─ IdentifierPatternNode [8:1..8:2]
+         │   │       └─ Identifier [8:1..8:2]: "_"
+         │   └─ Body [8:2..10:0]
+         │       ├─ : [8:2..8:3]: ":"
+         │       └─ SuiteNodeBody [8:3..10:0]
+         │           ├─ Newline [8:3..9:0]: "\n"
+         │           └─ SuiteNode [9:0..10:0]
+         │               ├─ Indent [9:0..9:2]: "\t\t"
+         │               ├─ SimpleStatement [9:2..10:0]
+         │               │   ├─ SmallStatement [9:2..9:19]
+         │               │   │   └─ CallExpressionNode [9:2..9:19]
+         │               │   │       ├─ Identifier [9:2..9:7]: "print"
+         │               │   │       └─ CallParamsExpressionNode [9:7..9:19]
+         │               │   │           ├─ ( [9:7..9:8]: "("
+         │               │   │           ├─ ⚠ [9:8..9:18]: "\"default!\""
+         │               │   │           └─ ) [9:18..9:19]: ")"
+         │               │   └─ Newline [9:19..10:0]: "\n"
+         │               └─ Dedent 10:0
+         └─ Dedent 10:0

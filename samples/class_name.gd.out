@@ -1,5 +1,19 @@
-Script [1:0..2:0]
- └─ SimpleStatement [1:0..2:0]
-     └─ ClassNameStatement [1:0..1:16]
-         ├─ class_name [1:0..1:10]: "class_name"
-         └─ Identifier [1:11..1:16]: "Hello"
+Script [1:0..3:24]
+ ├─ SimpleStatement [1:0..2:0]
+ │   ├─ SmallStatement [1:0..1:16]
+ │   │   └─ ClassNameStatement [1:0..1:16]
+ │   │       ├─ class_name [1:0..1:10]: "class_name"
+ │   │       └─ Identifier [1:11..1:16]: "Hello"
+ │   └─ Newline [1:16..2:0]: "\n"
+ ├─ SimpleStatement [3:0..3:15]
+ │   ├─ SmallStatement [3:0..3:14]
+ │   │   └─ ClassNameStatement [3:0..3:14]
+ │   │       ├─ class_name [3:0..3:10]: "class_name"
+ │   │       └─ Identifier [3:11..3:14]: "Bye"
+ │   └─ ⚠ 3:15
+ └─ SimpleStatement [3:15..3:24]
+     ├─ SmallStatement [3:15..3:24]
+     │   └─ ExtendsStatement [3:15..3:24]
+     │       ├─ extends [3:15..3:22]: "extends"
+     │       └─ Identifier [3:23..3:24]: "A"
+     └─ Eof 3:24

@@ -1,4 +1,6 @@
 Script [1:0..2:0]
  └─ SimpleStatement [1:0..2:0]
-     └─ PassStatement [1:0..1:4]
-         └─ pass [1:0..1:4]: "pass"
+     ├─ SmallStatement [1:0..1:4]
+     │   └─ PassStatement [1:0..1:4]
+     │       └─ pass [1:0..1:4]: "pass"
+     └─ Newline [1:4..2:0]: "\n"

@@ -1,5 +1,64 @@
-Script [1:0..2:0]
- └─ SimpleStatement [1:0..2:0]
-     └─ SignalStatement [1:0..1:12]
-         ├─ signal [1:0..1:6]: "signal"
-         └─ Identifier [1:7..1:12]: "hello"
+Script [1:0..5:34]
+ ├─ SimpleStatement [1:0..2:0]
+ │   ├─ SmallStatement [1:0..1:12]
+ │   │   └─ SignalStatement [1:0..1:12]
+ │   │       ├─ signal [1:0..1:6]: "signal"
+ │   │       └─ Identifier [1:7..1:12]: "hello"
+ │   └─ Newline [1:12..2:0]: "\n"
+ ├─ SimpleStatement [2:0..3:0]
+ │   ├─ SmallStatement [2:0..2:15]
+ │   │   └─ SignalStatement [2:0..2:15]
+ │   │       ├─ signal [2:0..2:6]: "signal"
+ │   │       ├─ Identifier [2:7..2:13]: "hello2"
+ │   │       └─ CallParamsExpressionNode [2:13..2:15]
+ │   │           ├─ ( [2:13..2:14]: "("
+ │   │           └─ ) [2:14..2:15]: ")"
+ │   └─ Newline [2:15..3:0]: "\n"
+ ├─ SimpleStatement [3:0..4:0]
+ │   ├─ SmallStatement [3:0..3:16]
+ │   │   └─ SignalStatement [3:0..3:16]
+ │   │       ├─ signal [3:0..3:6]: "signal"
+ │   │       ├─ Identifier [3:7..3:13]: "hello3"
+ │   │       └─ CallParamsExpressionNode [3:13..3:16]
+ │   │           ├─ ( [3:13..3:14]: "("
+ │   │           ├─ ParameterNode [3:14..3:15]
+ │   │           │   └─ Identifier [3:14..3:15]: "a"
+ │   │           └─ ) [3:15..3:16]: ")"
+ │   └─ Newline [3:16..4:0]: "\n"
+ ├─ SimpleStatement [4:0..5:0]
+ │   ├─ SmallStatement [4:0..4:21]
+ │   │   └─ SignalStatement [4:0..4:21]
+ │   │       ├─ signal [4:0..4:6]: "signal"
+ │   │       ├─ Identifier [4:7..4:13]: "hello4"
+ │   │       └─ CallParamsExpressionNode [4:13..4:21]
+ │   │           ├─ ( [4:13..4:14]: "("
+ │   │           ├─ ParameterNode [4:14..4:20]
+ │   │           │   ├─ Identifier [4:14..4:15]: "b"
+ │   │           │   └─ TypeCast [4:15..4:20]
+ │   │           │       ├─ : [4:15..4:16]: ":"
+ │   │           │       └─ Type [4:17..4:20]
+ │   │           │           └─ Identifier [4:17..4:20]: "int"
+ │   │           └─ ) [4:20..4:21]: ")"
+ │   └─ Newline [4:21..5:0]: "\n"
+ └─ SimpleStatement [5:0..5:34]
+     ├─ SmallStatement [5:0..5:34]
+     │   └─ SignalStatement [5:0..5:34]
+     │       ├─ signal [5:0..5:6]: "signal"
+     │       ├─ Identifier [5:7..5:13]: "hello5"
+     │       └─ CallParamsExpressionNode [5:13..5:34]
+     │           ├─ ( [5:13..5:14]: "("
+     │           ├─ ParameterNode [5:14..5:22]
+     │           │   ├─ Identifier [5:14..5:15]: "c"
+     │           │   └─ TypeCast [5:15..5:22]
+     │           │       ├─ : [5:15..5:16]: ":"
+     │           │       └─ Type [5:17..5:22]
+     │           │           └─ Identifier [5:17..5:22]: "float"
+     │           ├─ , [5:22..5:23]: ","
+     │           ├─ ParameterNode [5:24..5:33]
+     │           │   ├─ Identifier [5:24..5:25]: "d"
+     │           │   └─ TypeCast [5:25..5:33]
+     │           │       ├─ : [5:25..5:26]: ":"
+     │           │       └─ Type [5:27..5:33]
+     │           │           └─ Identifier [5:27..5:33]: "Person"
+     │           └─ ) [5:33..5:34]: ")"
+     └─ Eof 5:34

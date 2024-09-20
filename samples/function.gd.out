@@ -1,60 +1,129 @@
-Script [1:0..5:0]
- ├─ CompoundStatement [1:0..3:0]
- │   ├─ FunctionNode [1:0..3:0]
- │   │   ├─ func [1:0..1:4]: "func"
- │   │   ├─ Identifier [1:5..1:18]: "my_function_a"
- │   │   ├─ CallParams [1:18..1:20]
- │   │   │   ├─ ( [1:18..1:19]: "("
- │   │   │   └─ ) [1:19..1:20]: ")"
- │   │   └─ Body [1:20..3:0]
- │   │       ├─ : [1:20..1:21]: ":"
- │   │       ├─ CallExpressionNode [1:22..1:32]
- │   │       │   ├─ Identifier [1:22..1:27]: "print"
- │   │       │   └─ CallParams [1:27..1:32]
- │   │       │       ├─ ( [1:27..1:28]: "("
- │   │       │       ├─ LiteralExpressionNode [1:28..1:31]
- │   │       │       │   └─ String [1:28..1:31]: "\"a\""
- │   │       │       └─ ) [1:31..1:32]: ")"
- │   │       └─ ⚠ 3:0
- │   └─ ⚠ 3:0
- └─ CompoundStatement [3:0..4:11]
-     └─ FunctionNode [3:0..4:11]
-         ├─ func [3:0..3:4]: "func"
-         ├─ Identifier [3:5..3:18]: "my_function_b"
-         ├─ CallParams [3:18..3:57]
-         │   ├─ ( [3:18..3:19]: "("
-         │   ├─ ParameterNode [3:19..3:20]
-         │   │   └─ Identifier [3:19..3:20]: "a"
-         │   ├─ , [3:20..3:21]: ","
-         │   ├─ ParameterNode [3:22..3:29]
-         │   │   ├─ Identifier [3:22..3:23]: "b"
-         │   │   └─ TypeCast [3:23..3:29]
-         │   │       ├─ : [3:23..3:24]: ":"
-         │   │       └─ Type [3:25..3:29]
-         │   │           └─ Identifier [3:25..3:29]: "Node"
-         │   ├─ , [3:29..3:30]: ","
-         │   ├─ ParameterNode [3:31..3:39]
-         │   │   ├─ Identifier [3:31..3:32]: "c"
-         │   │   ├─ ⚠ [3:33..3:34]: "="
-         │   │   └─ ⚠ [3:35..3:39]
-         │   │       └─ True [3:35..3:39]: "true"
-         │   ├─ , [3:39..3:40]: ","
-         │   ├─ ParameterNode [3:41..3:48]
-         │   │   ├─ Identifier [3:41..3:42]: "d"
-         │   │   └─ TypeCast [3:42..3:48]
-         │   │       ├─ : [3:42..3:43]: ":"
-         │   │       └─ Type [3:44..3:48]
-         │   │           └─ Identifier [3:44..3:48]: "bool"
-         │   ├─ ⚠ [3:49..3:50]: "="
-         │   ├─ ⚠ [3:51..3:56]
-         │   │   └─ False [3:51..3:56]: "false"
-         │   └─ ) [3:56..3:57]: ")"
-         └─ Body [3:57..4:11]
-             ├─ : [3:57..3:58]: ":"
-             └─ CallExpressionNode [4:1..4:11]
-                 ├─ Identifier [4:1..4:6]: "print"
-                 └─ CallParams [4:6..4:11]
-                     ├─ ( [4:6..4:7]: "("
-                     ├─ LiteralExpressionNode [4:7..4:10]
-                     │   └─ String [4:7..4:10]: "\"b\""
-                     └─ ) [4:10..4:11]: ")"
+Script [1:0..10:21]
+ ├─ CompoundStatement [1:0..2:0]
+ │   └─ FunctionNode [1:0..2:0]
+ │       ├─ func [1:0..1:4]: "func"
+ │       ├─ Identifier [1:5..1:18]: "my_function_a"
+ │       ├─ CallParamsParameterNode [1:18..1:20]
+ │       │   ├─ ( [1:18..1:19]: "("
+ │       │   └─ ) [1:19..1:20]: ")"
+ │       └─ Body [1:20..2:0]
+ │           ├─ : [1:20..1:21]: ":"
+ │           └─ ExpressionNodeBody [1:22..2:0]
+ │               └─ SimpleStatement [1:22..2:0]
+ │                   ├─ SmallStatement [1:22..1:32]
+ │                   │   └─ CallExpressionNode [1:22..1:32]
+ │                   │       ├─ Identifier [1:22..1:27]: "print"
+ │                   │       └─ CallParamsExpressionNode [1:27..1:32]
+ │                   │           ├─ ( [1:27..1:28]: "("
+ │                   │           ├─ ⚠ [1:28..1:31]: "\"a\""
+ │                   │           └─ ) [1:31..1:32]: ")"
+ │                   └─ Newline [1:32..2:0]: "\n"
+ ├─ CompoundStatement [3:0..5:0]
+ │   └─ FunctionNode [3:0..5:0]
+ │       ├─ func [3:0..3:4]: "func"
+ │       ├─ Identifier [3:5..3:18]: "my_function_b"
+ │       ├─ CallParamsParameterNode [3:18..3:57]
+ │       │   ├─ ( [3:18..3:19]: "("
+ │       │   ├─ ParameterNode [3:19..3:20]
+ │       │   │   └─ Identifier [3:19..3:20]: "a"
+ │       │   ├─ , [3:20..3:21]: ","
+ │       │   ├─ ParameterNode [3:22..3:29]
+ │       │   │   ├─ Identifier [3:22..3:23]: "b"
+ │       │   │   └─ TypeCast [3:23..3:29]
+ │       │   │       ├─ : [3:23..3:24]: ":"
+ │       │   │       └─ Type [3:25..3:29]
+ │       │   │           └─ Identifier [3:25..3:29]: "Node"
+ │       │   ├─ , [3:29..3:30]: ","
+ │       │   ├─ AssignmentExpressionNode [3:31..3:39]
+ │       │   │   ├─ ParameterNode [3:31..3:32]
+ │       │   │   │   └─ Identifier [3:31..3:32]: "c"
+ │       │   │   ├─ Equal [3:33..3:34]: "="
+ │       │   │   └─ LiteralExpressionNode [3:35..3:39]
+ │       │   │       └─ True [3:35..3:39]: "true"
+ │       │   ├─ , [3:39..3:40]: ","
+ │       │   ├─ AssignmentExpressionNode [3:41..3:56]
+ │       │   │   ├─ ParameterNode [3:41..3:48]
+ │       │   │   │   ├─ Identifier [3:41..3:42]: "d"
+ │       │   │   │   └─ TypeCast [3:42..3:48]
+ │       │   │   │       ├─ : [3:42..3:43]: ":"
+ │       │   │   │       └─ Type [3:44..3:48]
+ │       │   │   │           └─ Identifier [3:44..3:48]: "bool"
+ │       │   │   ├─ Equal [3:49..3:50]: "="
+ │       │   │   └─ LiteralExpressionNode [3:51..3:56]
+ │       │   │       └─ False [3:51..3:56]: "false"
+ │       │   └─ ) [3:56..3:57]: ")"
+ │       └─ Body [3:57..5:0]
+ │           ├─ : [3:57..3:58]: ":"
+ │           └─ SuiteNodeBody [3:58..5:0]
+ │               ├─ Newline [3:58..4:0]: "\n"
+ │               └─ SuiteNode [4:0..5:0]
+ │                   ├─ Indent [4:0..4:1]: "\t"
+ │                   ├─ SimpleStatement [4:1..5:0]
+ │                   │   ├─ SmallStatement [4:1..4:11]
+ │                   │   │   └─ CallExpressionNode [4:1..4:11]
+ │                   │   │       ├─ Identifier [4:1..4:6]: "print"
+ │                   │   │       └─ CallParamsExpressionNode [4:6..4:11]
+ │                   │   │           ├─ ( [4:6..4:7]: "("
+ │                   │   │           ├─ ⚠ [4:7..4:10]: "\"b\""
+ │                   │   │           └─ ) [4:10..4:11]: ")"
+ │                   │   └─ Newline [4:11..5:0]: "\n"
+ │                   └─ Dedent [6:0..5:0]: ""
+ ├─ CompoundStatement [6:0..8:0]
+ │   └─ FunctionNode [6:0..8:0]
+ │       ├─ func [6:0..6:4]: "func"
+ │       ├─ Identifier [6:5..6:18]: "my_function_c"
+ │       ├─ CallParamsParameterNode [6:18..6:42]
+ │       │   ├─ ( [6:18..6:19]: "("
+ │       │   ├─ ParameterNode [6:19..6:28]
+ │       │   │   ├─ Identifier [6:19..6:23]: "num1"
+ │       │   │   └─ TypeCast [6:23..6:28]
+ │       │   │       ├─ : [6:23..6:24]: ":"
+ │       │   │       └─ Type [6:25..6:28]
+ │       │   │           └─ Identifier [6:25..6:28]: "int"
+ │       │   ├─ , [6:28..6:29]: ","
+ │       │   ├─ ParameterNode [6:30..6:41]
+ │       │   │   ├─ Identifier [6:30..6:34]: "num2"
+ │       │   │   └─ TypeCast [6:34..6:41]
+ │       │   │       ├─ : [6:34..6:35]: ":"
+ │       │   │       └─ Type [6:36..6:41]
+ │       │   │           └─ Identifier [6:36..6:41]: "float"
+ │       │   └─ ) [6:41..6:42]: ")"
+ │       ├─ FunctionReturnType [6:43..6:51]
+ │       │   ├─ FunctionReturnPointer [6:43..6:45]: "->"
+ │       │   └─ Type [6:46..6:51]
+ │       │       └─ Identifier [6:46..6:51]: "float"
+ │       └─ Body [6:51..8:0]
+ │           ├─ : [6:51..6:52]: ":"
+ │           └─ SuiteNodeBody [6:52..8:0]
+ │               ├─ Newline [6:52..7:0]: "\n"
+ │               └─ SuiteNode [7:0..8:0]
+ │                   ├─ Indent [7:0..7:1]: "\t"
+ │                   ├─ SimpleStatement [7:1..8:0]
+ │                   │   ├─ SmallStatement [7:1..7:26]
+ │                   │   │   └─ ReturnNode [7:1..7:26]
+ │                   │   │       ├─ return [7:1..7:7]: "return"
+ │                   │   │       └─ BinaryOperatorExpressionNode [7:8..7:26]
+ │                   │   │           ├─ CallExpressionNode [7:8..7:19]
+ │                   │   │           │   ├─ Identifier [7:8..7:13]: "float"
+ │                   │   │           │   └─ CallParamsExpressionNode [7:13..7:19]
+ │                   │   │           │       ├─ ( [7:13..7:14]: "("
+ │                   │   │           │       ├─ ParameterNode [7:14..7:18]
+ │                   │   │           │       │   └─ Identifier [7:14..7:18]: "num1"
+ │                   │   │           │       └─ ) [7:18..7:19]: ")"
+ │                   │   │           ├─ ArithOp [7:20..7:21]: "*"
+ │                   │   │           └─ IdentifierExpressionNode [7:22..7:26]
+ │                   │   │               └─ Identifier [7:22..7:26]: "num2"
+ │                   │   └─ Newline [7:26..8:0]: "\n"
+ │                   └─ Dedent [10:0..8:0]: ""
+ └─ SimpleStatement [10:0..10:21]
+     ├─ SmallStatement [10:0..10:21]
+     │   └─ CallExpressionNode [10:0..10:21]
+     │       ├─ Identifier [10:0..10:13]: "my_function_c"
+     │       └─ CallParamsExpressionNode [10:13..10:21]
+     │           ├─ ( [10:13..10:14]: "("
+     │           ├─ ⚠ [10:14..10:15]: "1"
+     │           ├─ ⚠ [10:15..10:16]
+     │           │   └─ , [10:15..10:16]: ","
+     │           ├─ ⚠ [10:17..10:20]: "2.3"
+     │           └─ ) [10:20..10:21]: ")"
+     └─ Eof 10:21
