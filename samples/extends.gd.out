@@ -1,5 +1,7 @@
 Script [1:0..2:0]
  └─ SimpleStatement [1:0..2:0]
-     └─ ExtendsStatement [1:0..1:12]
-         ├─ extends [1:0..1:7]: "extends"
-         └─ Identifier [1:8..1:12]: "Node"
+     ├─ SmallStatement [1:0..1:12]
+     │   └─ ExtendsStatement [1:0..1:12]
+     │       ├─ extends [1:0..1:7]: "extends"
+     │       └─ Identifier [1:8..1:12]: "Node"
+     └─ Newline [1:12..2:0]: "\n"

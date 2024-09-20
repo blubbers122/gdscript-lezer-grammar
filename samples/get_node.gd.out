@@ -1,15 +1,23 @@
 Script [1:0..6:0]
- ├─ CompoundStatement [1:0..2:0]
- │   └─ GetNodeExpressionNode [1:0..1:7]
- │       └─ Identifier [1:1..1:7]: "MyNode"
- ├─ CompoundStatement [2:0..3:0]
- │   └─ GetNodeExpressionNode [2:0..2:7]
- │       └─ Identifier [2:1..2:7]: "MyNode"
- ├─ CompoundStatement [4:0..5:0]
- │   └─ GetNodeExpressionNode [4:0..4:13]
- │       ├─ Identifier [4:1..4:7]: "MyNode"
- │       └─ Identifier [4:8..4:13]: "Child"
- └─ CompoundStatement [5:0..6:0]
-     └─ GetNodeExpressionNode [5:0..5:13]
-         ├─ Identifier [5:1..5:7]: "MyNode"
-         └─ Identifier [5:8..5:13]: "Child"
+ ├─ SimpleStatement [1:0..2:0]
+ │   ├─ SmallStatement [1:0..1:7]
+ │   │   └─ GetNodeExpressionNode [1:0..1:7]
+ │   │       └─ Identifier [1:1..1:7]: "MyNode"
+ │   └─ Newline [1:7..2:0]: "\n"
+ ├─ SimpleStatement [2:0..3:0]
+ │   ├─ SmallStatement [2:0..2:7]
+ │   │   └─ GetNodeExpressionNode [2:0..2:7]
+ │   │       └─ Identifier [2:1..2:7]: "MyNode"
+ │   └─ Newline [2:7..3:0]: "\n"
+ ├─ SimpleStatement [4:0..5:0]
+ │   ├─ SmallStatement [4:0..4:13]
+ │   │   └─ GetNodeExpressionNode [4:0..4:13]
+ │   │       ├─ Identifier [4:1..4:7]: "MyNode"
+ │   │       └─ Identifier [4:8..4:13]: "Child"
+ │   └─ Newline [4:13..5:0]: "\n"
+ └─ SimpleStatement [5:0..6:0]
+     ├─ SmallStatement [5:0..5:13]
+     │   └─ GetNodeExpressionNode [5:0..5:13]
+     │       ├─ Identifier [5:1..5:7]: "MyNode"
+     │       └─ Identifier [5:8..5:13]: "Child"
+     └─ Newline [5:13..6:0]: "\n"

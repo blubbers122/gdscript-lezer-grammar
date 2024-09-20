@@ -1,0 +1,297 @@
+Script [1:0..36:0]
+ ├─ SimpleStatement [1:0..2:0]
+ │   ├─ SmallStatement [1:0..1:14]
+ │   │   └─ StandaloneAnnotationNode [1:0..1:14]
+ │   │       └─ AnnotationNode [1:0..1:14]
+ │   │           ├─ @ [1:0..1:1]: "@"
+ │   │           ├─ Identifier [1:1..1:5]: "icon"
+ │   │           └─ CallParamsLiteralExpressionNode [1:5..1:14]
+ │   │               ├─ ( [1:5..1:6]: "("
+ │   │               ├─ LiteralExpressionNode [1:6..1:13]
+ │   │               │   └─ String [1:6..1:13]: "\"hello\""
+ │   │               └─ ) [1:13..1:14]: ")"
+ │   └─ Newline [1:14..2:0]: "\n"
+ ├─ CompoundStatement [3:0..6:0]
+ │   └─ MatchNode [3:0..6:0]
+ │       ├─ match [3:0..3:5]: "match"
+ │       ├─ Identifier [3:6..3:10]: "test"
+ │       ├─ : [3:10..3:11]: ":"
+ │       ├─ Newline [3:11..4:0]: "\n"
+ │       ├─ Indent [4:0..4:1]: "\t"
+ │       ├─ MatchBranchNode [4:1..6:0]
+ │       │   ├─ PatternNode [4:1..4:2]
+ │       │   │   └─ LiteralPatternNode [4:1..4:2]
+ │       │   │       └─ LiteralExpressionNode [4:1..4:2]: "1"
+ │       │   └─ Body [4:2..6:0]
+ │       │       ├─ : [4:2..4:3]: ":"
+ │       │       └─ SuiteNodeBody [4:3..6:0]
+ │       │           ├─ Newline [4:3..5:0]: "\n"
+ │       │           └─ SuiteNode [5:0..6:0]
+ │       │               ├─ Indent [5:0..5:2]: "\t\t"
+ │       │               ├─ SimpleStatement [5:2..6:0]
+ │       │               │   ├─ SmallStatement [5:2..5:16]
+ │       │               │   │   └─ CallExpressionNode [5:2..5:16]
+ │       │               │   │       ├─ Identifier [5:2..5:7]: "print"
+ │       │               │   │       └─ CallParamsExpressionNode [5:7..5:16]
+ │       │               │   │           ├─ ( [5:7..5:8]: "("
+ │       │               │   │           ├─ ⚠ [5:8..5:15]: "\"hello\""
+ │       │               │   │           └─ ) [5:15..5:16]: ")"
+ │       │               │   └─ Newline [5:16..6:0]: "\n"
+ │       │               └─ Dedent [7:0..6:0]: ""
+ │       └─ Dedent [7:0..6:0]: ""
+ ├─ SimpleStatement [7:0..8:0]
+ │   ├─ SmallStatement [7:0..7:23]
+ │   │   └─ ExtendsStatement [7:0..7:23]
+ │   │       ├─ extends [7:0..7:7]: "extends"
+ │   │       └─ Identifier [7:8..7:23]: "CharacterBody2D"
+ │   └─ Newline [7:23..8:0]: "\n"
+ ├─ SimpleStatement [9:0..10:0]
+ │   ├─ SmallStatement [9:0..9:22]
+ │   │   └─ SignalStatement [9:0..9:22]
+ │   │       ├─ signal [9:0..9:6]: "signal"
+ │   │       └─ Identifier [9:7..9:22]: "health_depleted"
+ │   └─ Newline [9:22..10:0]: "\n"
+ ├─ SimpleStatement [11:0..12:0]
+ │   ├─ SmallStatement [11:0..11:18]
+ │   │   └─ AssignmentExpressionNode [11:0..11:18]
+ │   │       ├─ VariableNode [11:0..11:10]
+ │   │       │   ├─ var [11:0..11:3]: "var"
+ │   │       │   └─ Identifier [11:4..11:10]: "health"
+ │   │       ├─ Equal [11:11..11:12]: "="
+ │   │       └─ LiteralExpressionNode [11:13..11:18]: "100.0"
+ │   └─ Newline [11:18..12:0]: "\n"
+ └─ CompoundStatement [14:0..36:0]
+     └─ FunctionNode [14:0..36:0]
+         ├─ func [14:0..14:4]: "func"
+         ├─ Identifier [14:5..14:21]: "_physics_process"
+         ├─ CallParamsParameterNode [14:21..14:28]
+         │   ├─ ( [14:21..14:22]: "("
+         │   ├─ ParameterNode [14:22..14:27]
+         │   │   └─ Identifier [14:22..14:27]: "delta"
+         │   └─ ) [14:27..14:28]: ")"
+         └─ Body [14:28..36:0]
+             ├─ : [14:28..14:29]: ":"
+             └─ SuiteNodeBody [14:29..36:0]
+                 ├─ Newline [14:29..15:0]: "\n"
+                 └─ SuiteNode [15:0..36:0]
+                     ├─ Indent [15:0..15:4]: "    "
+                     ├─ SimpleStatement [15:4..16:0]
+                     │   ├─ SmallStatement [15:4..15:23]
+                     │   │   └─ AssignmentExpressionNode [15:4..15:23]
+                     │   │       ├─ ConstantNode [15:4..15:15]
+                     │   │       │   ├─ const [15:4..15:9]: "const"
+                     │   │       │   └─ Identifier [15:10..15:15]: "SPEED"
+                     │   │       ├─ Equal [15:16..15:17]: "="
+                     │   │       └─ LiteralExpressionNode [15:18..15:23]: "600.0"
+                     │   └─ Newline [15:23..16:0]: "\n"
+                     ├─ SimpleStatement [16:4..17:0]
+                     │   ├─ SmallStatement [16:4..16:92]
+                     │   │   └─ AssignmentExpressionNode [16:4..16:92]
+                     │   │       ├─ VariableNode [16:4..16:17]
+                     │   │       │   ├─ var [16:4..16:7]: "var"
+                     │   │       │   └─ Identifier [16:8..16:17]: "direction"
+                     │   │       ├─ Equal [16:18..16:19]: "="
+                     │   │       └─ CallExpressionNode [16:20..16:92]
+                     │   │           ├─ SubscriptExpressionNode [16:20..16:36]
+                     │   │           │   ├─ FirstVariableName [16:20..16:25]
+                     │   │           │   │   └─ VariableName [16:20..16:25]
+                     │   │           │   │       └─ Identifier [16:20..16:25]: "Input"
+                     │   │           │   ├─ . [16:25..16:26]: "."
+                     │   │           │   └─ VariableName [16:26..16:36]
+                     │   │           │       └─ Identifier [16:26..16:36]: "get_vector"
+                     │   │           └─ CallParamsExpressionNode [16:36..16:92]
+                     │   │               ├─ ( [16:36..16:37]: "("
+                     │   │               ├─ ⚠ [16:37..16:91]: "\"move_left\", \"move_right\", \"move_forward\", \"move_back\""
+                     │   │               └─ ) [16:91..16:92]: ")"
+                     │   └─ Newline [16:92..17:0]: "\n"
+                     ├─ SimpleStatement [17:4..18:0]
+                     │   ├─ SmallStatement [17:4..17:32]
+                     │   │   └─ AssignmentExpressionNode [17:4..17:32]
+                     │   │       ├─ Identifier [17:4..17:12]: "velocity"
+                     │   │       ├─ Equal [17:13..17:14]: "="
+                     │   │       └─ BinaryOperatorExpressionNode [17:15..17:32]
+                     │   │           ├─ IdentifierExpressionNode [17:15..17:24]
+                     │   │           │   └─ Identifier [17:15..17:24]: "direction"
+                     │   │           ├─ ArithOp [17:25..17:26]: "*"
+                     │   │           └─ IdentifierExpressionNode [17:27..17:32]
+                     │   │               └─ Identifier [17:27..17:32]: "SPEED"
+                     │   └─ Newline [17:32..18:0]: "\n"
+                     ├─ SimpleStatement [19:4..20:0]
+                     │   ├─ SmallStatement [19:4..19:20]
+                     │   │   └─ CallExpressionNode [19:4..19:20]
+                     │   │       ├─ Identifier [19:4..19:18]: "move_and_slide"
+                     │   │       └─ CallParamsExpressionNode [19:18..19:20]
+                     │   │           ├─ ( [19:18..19:19]: "("
+                     │   │           └─ ) [19:19..19:20]: ")"
+                     │   └─ Newline [19:20..20:0]: "\n"
+                     ├─ CompoundStatement [21:4..25:0]
+                     │   └─ IfNode [21:4..25:0]
+                     │       ├─ IfClause [21:4..23:0]
+                     │       │   ├─ if [21:4..21:6]: "if"
+                     │       │   ├─ BinaryOperatorExpressionNode [21:7..21:30]
+                     │       │   │   ├─ CallExpressionNode [21:7..21:24]
+                     │       │   │   │   ├─ SubscriptExpressionNode [21:7..21:22]
+                     │       │   │   │   │   ├─ FirstVariableName [21:7..21:15]
+                     │       │   │   │   │   │   └─ VariableName [21:7..21:15]
+                     │       │   │   │   │   │       └─ Identifier [21:7..21:15]: "velocity"
+                     │       │   │   │   │   ├─ . [21:15..21:16]: "."
+                     │       │   │   │   │   └─ VariableName [21:16..21:22]
+                     │       │   │   │   │       └─ Identifier [21:16..21:22]: "length"
+                     │       │   │   │   └─ CallParamsExpressionNode [21:22..21:24]
+                     │       │   │   │       ├─ ( [21:22..21:23]: "("
+                     │       │   │   │       └─ ) [21:23..21:24]: ")"
+                     │       │   │   ├─ CompareOp [21:25..21:26]: ">"
+                     │       │   │   └─ LiteralExpressionNode [21:27..21:30]: "0.0"
+                     │       │   └─ Body [21:30..23:0]
+                     │       │       ├─ : [21:30..21:31]: ":"
+                     │       │       └─ SuiteNodeBody [21:31..23:0]
+                     │       │           ├─ Newline [21:31..22:0]: "\n"
+                     │       │           └─ SuiteNode [22:0..23:0]
+                     │       │               ├─ Indent [22:0..22:8]: "        "
+                     │       │               ├─ SimpleStatement [22:8..23:0]
+                     │       │               │   ├─ SmallStatement [22:8..22:39]
+                     │       │               │   │   └─ CallExpressionNode [22:8..22:39]
+                     │       │               │   │       ├─ SubscriptExpressionNode [22:8..22:37]
+                     │       │               │   │       │   ├─ GetNodeExpressionNode [22:8..22:17]
+                     │       │               │   │       │   │   └─ Identifier [22:9..22:17]: "HappyBoo"
+                     │       │               │   │       │   ├─ . [22:17..22:18]: "."
+                     │       │               │   │       │   └─ VariableName [22:18..22:37]
+                     │       │               │   │       │       └─ Identifier [22:18..22:37]: "play_walk_animation"
+                     │       │               │   │       └─ CallParamsExpressionNode [22:37..22:39]
+                     │       │               │   │           ├─ ( [22:37..22:38]: "("
+                     │       │               │   │           └─ ) [22:38..22:39]: ")"
+                     │       │               │   └─ Newline [22:39..23:0]: "\n"
+                     │       │               └─ Dedent 23:0
+                     │       └─ ElseClause [23:4..25:0]
+                     │           ├─ else [23:4..23:8]: "else"
+                     │           └─ Body [23:8..25:0]
+                     │               ├─ : [23:8..23:9]: ":"
+                     │               └─ SuiteNodeBody [23:9..25:0]
+                     │                   ├─ Newline [23:9..24:0]: "\n"
+                     │                   └─ SuiteNode [24:0..25:0]
+                     │                       ├─ Indent [24:0..24:8]: "        "
+                     │                       ├─ SimpleStatement [24:8..25:0]
+                     │                       │   ├─ SmallStatement [24:8..24:39]
+                     │                       │   │   └─ CallExpressionNode [24:8..24:39]
+                     │                       │   │       ├─ SubscriptExpressionNode [24:8..24:37]
+                     │                       │   │       │   ├─ GetNodeExpressionNode [24:8..24:17]
+                     │                       │   │       │   │   └─ Identifier [24:9..24:17]: "HappyBoo"
+                     │                       │   │       │   ├─ . [24:17..24:18]: "."
+                     │                       │   │       │   └─ VariableName [24:18..24:37]
+                     │                       │   │       │       └─ Identifier [24:18..24:37]: "play_idle_animation"
+                     │                       │   │       └─ CallParamsExpressionNode [24:37..24:39]
+                     │                       │   │           ├─ ( [24:37..24:38]: "("
+                     │                       │   │           └─ ) [24:38..24:39]: ")"
+                     │                       │   └─ Newline [24:39..25:0]: "\n"
+                     │                       └─ Dedent [27:0..25:0]: ""
+                     ├─ Comment [26:4..26:19]: "# Taking damage"
+                     ├─ SimpleStatement [27:4..28:0]
+                     │   ├─ SmallStatement [27:4..27:28]
+                     │   │   └─ AssignmentExpressionNode [27:4..27:28]
+                     │   │       ├─ ConstantNode [27:4..27:21]
+                     │   │       │   ├─ const [27:4..27:9]: "const"
+                     │   │       │   └─ Identifier [27:10..27:21]: "DAMAGE_RATE"
+                     │   │       ├─ Equal [27:22..27:23]: "="
+                     │   │       └─ LiteralExpressionNode [27:24..27:28]: "20.0"
+                     │   └─ Newline [27:28..28:0]: "\n"
+                     ├─ SimpleStatement [28:4..29:0]
+                     │   ├─ SmallStatement [28:4..28:60]
+                     │   │   └─ AssignmentExpressionNode [28:4..28:60]
+                     │   │       ├─ VariableNode [28:4..28:24]
+                     │   │       │   ├─ var [28:4..28:7]: "var"
+                     │   │       │   └─ Identifier [28:8..28:24]: "overlapping_mobs"
+                     │   │       ├─ Equal [28:25..28:26]: "="
+                     │   │       └─ CallExpressionNode [28:27..28:60]
+                     │   │           ├─ SubscriptExpressionNode [28:27..28:58]
+                     │   │           │   ├─ GetNodeExpressionNode [28:27..28:35]
+                     │   │           │   │   └─ Identifier [28:28..28:35]: "HurtBox"
+                     │   │           │   ├─ . [28:35..28:36]: "."
+                     │   │           │   └─ VariableName [28:36..28:58]
+                     │   │           │       └─ Identifier [28:36..28:58]: "get_overlapping_bodies"
+                     │   │           └─ CallParamsExpressionNode [28:58..28:60]
+                     │   │               ├─ ( [28:58..28:59]: "("
+                     │   │               └─ ) [28:59..28:60]: ")"
+                     │   └─ Newline [28:60..29:0]: "\n"
+                     ├─ CompoundStatement [29:4..36:0]
+                     │   └─ IfNode [29:4..36:0]
+                     │       └─ IfClause [29:4..36:0]
+                     │           ├─ if [29:4..29:6]: "if"
+                     │           ├─ IdentifierExpressionNode [29:7..29:23]
+                     │           │   └─ Identifier [29:7..29:23]: "overlapping_mobs"
+                     │           └─ Body [29:23..36:0]
+                     │               ├─ : [29:23..29:24]: ":"
+                     │               └─ SuiteNodeBody [29:24..36:0]
+                     │                   ├─ Newline [29:24..30:0]: "\n"
+                     │                   └─ SuiteNode [30:0..36:0]
+                     │                       ├─ Indent [30:0..30:8]: "        "
+                     │                       ├─ SimpleStatement [30:8..31:0]
+                     │                       │   ├─ SmallStatement [30:8..30:63]
+                     │                       │   │   └─ AssignmentExpressionNode [30:8..30:63]
+                     │                       │   │       ├─ Identifier [30:8..30:14]: "health"
+                     │                       │   │       └─ BinaryOperatorExpressionNode [30:18..30:63]
+                     │                       │   │           ├─ BinaryOperatorExpressionNode [30:18..30:55]
+                     │                       │   │           │   ├─ IdentifierExpressionNode [30:18..30:29]
+                     │                       │   │           │   │   └─ Identifier [30:18..30:29]: "DAMAGE_RATE"
+                     │                       │   │           │   ├─ ArithOp [30:30..30:31]: "*"
+                     │                       │   │           │   └─ CallExpressionNode [30:32..30:55]
+                     │                       │   │           │       ├─ SubscriptExpressionNode [30:32..30:53]
+                     │                       │   │           │       │   ├─ FirstVariableName [30:32..30:48]
+                     │                       │   │           │       │   │   └─ VariableName [30:32..30:48]
+                     │                       │   │           │       │   │       └─ Identifier [30:32..30:48]: "overlapping_mobs"
+                     │                       │   │           │       │   ├─ . [30:48..30:49]: "."
+                     │                       │   │           │       │   └─ VariableName [30:49..30:53]
+                     │                       │   │           │       │       └─ Identifier [30:49..30:53]: "size"
+                     │                       │   │           │       └─ CallParamsExpressionNode [30:53..30:55]
+                     │                       │   │           │           ├─ ( [30:53..30:54]: "("
+                     │                       │   │           │           └─ ) [30:54..30:55]: ")"
+                     │                       │   │           ├─ ArithOp [30:56..30:57]: "*"
+                     │                       │   │           └─ IdentifierExpressionNode [30:58..30:63]
+                     │                       │   │               └─ Identifier [30:58..30:63]: "delta"
+                     │                       │   └─ Newline [30:63..31:0]: "\n"
+                     │                       ├─ SimpleStatement [31:8..32:0]
+                     │                       │   ├─ SmallStatement [31:8..31:33]
+                     │                       │   │   └─ AssignmentExpressionNode [31:8..31:33]
+                     │                       │   │       ├─ SubscriptExpressionNode [31:8..31:24]
+                     │                       │   │       │   ├─ GetNodeExpressionNode [31:8..31:18]
+                     │                       │   │       │   │   └─ Identifier [31:9..31:18]: "HealthBar"
+                     │                       │   │       │   ├─ . [31:18..31:19]: "."
+                     │                       │   │       │   └─ VariableName [31:19..31:24]
+                     │                       │   │       │       └─ Identifier [31:19..31:24]: "value"
+                     │                       │   │       ├─ Equal [31:25..31:26]: "="
+                     │                       │   │       └─ IdentifierExpressionNode [31:27..31:33]
+                     │                       │   │           └─ Identifier [31:27..31:33]: "health"
+                     │                       │   └─ Newline [31:33..32:0]: "\n"
+                     │                       ├─ CompoundStatement [32:8..36:0]
+                     │                       │   └─ IfNode [32:8..36:0]
+                     │                       │       └─ IfClause [32:8..36:0]
+                     │                       │           ├─ if [32:8..32:10]: "if"
+                     │                       │           ├─ BinaryOperatorExpressionNode [32:11..32:24]
+                     │                       │           │   ├─ IdentifierExpressionNode [32:11..32:17]
+                     │                       │           │   │   └─ Identifier [32:11..32:17]: "health"
+                     │                       │           │   ├─ CompareOp [32:18..32:20]: "<="
+                     │                       │           │   └─ LiteralExpressionNode [32:21..32:24]: "0.0"
+                     │                       │           └─ Body [32:24..36:0]
+                     │                       │               ├─ : [32:24..32:25]: ":"
+                     │                       │               └─ SuiteNodeBody [32:25..36:0]
+                     │                       │                   ├─ Newline [32:25..33:0]: "\n"
+                     │                       │                   ├─ Comment [33:12..33:68]: "# consider using queue_free and listening to tree_exited"
+                     │                       │                   ├─ Comment [34:12..34:58]: "# unless you mean to have an animation / juice"
+                     │                       │                   └─ SuiteNode [35:0..36:0]
+                     │                       │                       ├─ Indent [35:0..35:12]: "            "
+                     │                       │                       ├─ SimpleStatement [35:12..36:0]
+                     │                       │                       │   ├─ SmallStatement [35:12..35:34]
+                     │                       │                       │   │   └─ CallExpressionNode [35:12..35:34]
+                     │                       │                       │   │       ├─ SubscriptExpressionNode [35:12..35:32]
+                     │                       │                       │   │       │   ├─ FirstVariableName [35:12..35:27]
+                     │                       │                       │   │       │   │   └─ VariableName [35:12..35:27]
+                     │                       │                       │   │       │   │       └─ Identifier [35:12..35:27]: "health_depleted"
+                     │                       │                       │   │       │   ├─ . [35:27..35:28]: "."
+                     │                       │                       │   │       │   └─ VariableName [35:28..35:32]
+                     │                       │                       │   │       │       └─ Identifier [35:28..35:32]: "emit"
+                     │                       │                       │   │       └─ CallParamsExpressionNode [35:32..35:34]
+                     │                       │                       │   │           ├─ ( [35:32..35:33]: "("
+                     │                       │                       │   │           └─ ) [35:33..35:34]: ")"
+                     │                       │                       │   └─ Newline [35:34..36:0]: "\n"
+                     │                       │                       └─ Dedent 36:0
+                     │                       └─ Dedent 36:0
+                     └─ Dedent 36:0

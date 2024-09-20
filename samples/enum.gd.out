@@ -1,0 +1,31 @@
+Script [1:0..13:1]
+ ├─ CompoundStatement [1:0..5:1]
+ │   └─ EnumNode [1:0..5:1]
+ │       ├─ enum [1:0..1:4]: "enum"
+ │       └─ EnumBody [1:5..5:1]
+ │           ├─ { [1:5..1:6]: "{"
+ │           ├─ Identifier [2:1..2:4]: "ONE"
+ │           ├─ , [2:4..2:5]: ","
+ │           ├─ Identifier [3:1..3:4]: "TWO"
+ │           ├─ , [3:4..3:5]: ","
+ │           ├─ Identifier [4:1..4:6]: "THREE"
+ │           └─ } [5:0..5:1]: "}"
+ ├─ CompoundStatement [7:0..9:1]
+ │   └─ EnumNode [7:0..9:1]
+ │       ├─ enum [7:0..7:4]: "enum"
+ │       ├─ Identifier [7:5..7:11]: "MyEnum"
+ │       └─ EnumBody [7:12..9:1]
+ │           ├─ { [7:12..7:13]: "{"
+ │           ├─ Identifier [8:1..8:2]: "A"
+ │           ├─ , [8:2..8:3]: ","
+ │           ├─ Identifier [8:3..8:4]: "B"
+ │           ├─ , [8:4..8:5]: ","
+ │           ├─ Identifier [8:5..8:6]: "C"
+ │           └─ } [9:0..9:1]: "}"
+ └─ CompoundStatement [11:0..13:1]
+     └─ EnumNode [11:0..13:1]
+         ├─ enum [11:0..11:4]: "enum"
+         ├─ Identifier [11:5..11:7]: "Yo"
+         └─ EnumBody [11:8..13:1]
+             ├─ { [11:8..11:9]: "{"
+             └─ } [13:0..13:1]: "}"

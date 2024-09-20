@@ -73,6 +73,7 @@ SmallStatement {
 
 CompoundStatement {
     ClassNode |
+		EnumNode |
     FunctionNode |
     IfNode |
     ForNode |
@@ -92,6 +93,7 @@ node[@isGroup=Node] {
     AssertNode |
     assignableNode |
     ClassNode |
+		EnumNode |
     expressionNode |
     ForNode |
     FunctionNode |
@@ -164,6 +166,14 @@ AnnotationNode {
     "@" Identifier !call CallParamsLiteralExpressionNode?
 }
 
+EnumNode {
+	kw<"enum"> Identifier? EnumBody
+}
+
+EnumBody {
+	"{" commaSep<Identifier>? "}"
+}
+
 IfNode {
     IfClause
     (!else ElifClause)*
@@ -221,8 +231,12 @@ TypeCast {
     ":" Type
 }
 
+FunctionReturnPointer {
+	"->"
+}
+
 FunctionReturnType {
-    "->" Type
+	FunctionReturnPointer Type
 }
 
 expressionNode[@isGroup=ExpressionNode] {
@@ -251,7 +265,7 @@ ArrayExpressionNode {
 }
 
 AssignmentExpressionNode<assignee> {
-    assignee !assignment (assignmentAndOp | equal) ~assignAmbiguity expressionNode
+    assignee !assignment (assignmentAndOp | Equal) ~assignAmbiguity expressionNode
 }
 
 AwaitExpressionNode {
@@ -289,7 +303,7 @@ CallExpressionNode {
 }
 
 CallParamsExpressionNode {
-    "(" (commaSep<expressionNode>)? ")"
+    "(" (commaSep<ParameterNode>)? ")"
 }
 
 CallParamsParameterNode {
@@ -310,7 +324,7 @@ DictionaryExpressionNode {
 }
 
 DictionaryEntry {
-    expressionNode (":" | equal) expressionNode
+    expressionNode (":" | Equal) expressionNode
 }
 
 GetNodeExpressionNode {
@@ -348,8 +362,12 @@ PreloadExpressionNode {
     !cut kw<"preload"> !call CallParamsExpressionNode
 }
 
+FirstVariableName {
+	VariableName
+}
+
 SubscriptExpressionNode {
-    (VariableName | GetNodeExpressionNode) !attribute ("." VariableName)+
+    (FirstVariableName | GetNodeExpressionNode) !attribute ("." VariableName)+
 }
 
 TernaryOperatorExpressionNode {
@@ -478,10 +496,10 @@ Eof { eof }
     TernaryOp<expr> { expr }
     AssignOp<expr> { expr }
 
-    equal { "=" }
+    Equal { "=" }
 
     assignmentAndOp {
-        ($[+\-/%^] | "*" "*"? | "|" "|"? | "&" "&"? | "<<" | ">>" ">"? | "??") equal
+        ($[+\-/%^] | "*" "*"? | "|" "|"? | "&" "&"? | "<<" | ">>" ">"? | "??") Equal
     }
 
     @precedence {

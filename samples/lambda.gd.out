@@ -1,38 +1,48 @@
 Script [1:0..4:0]
- ├─ CompoundStatement [1:0..2:12]
- │   ├─ FunctionNode [1:0..2:12]
- │   │   ├─ func [1:0..1:4]: "func"
- │   │   ├─ ⚠ [1:5..1:6]: "_"
- │   │   ├─ Identifier [1:6..1:11]: "ready"
- │   │   ├─ CallParams [1:11..1:13]
- │   │   │   ├─ ( [1:11..1:12]: "("
- │   │   │   └─ ) [1:12..1:13]: ")"
- │   │   ├─ FunctionReturnType [1:14..1:21]
- │   │   │   └─ Type [1:17..1:21]
- │   │   │       └─ Identifier [1:17..1:21]: "void"
- │   │   └─ Body [1:21..2:12]
- │   │       ├─ : [1:21..1:22]: ":"
- │   │       ├─ AssignmentExpressionNode [2:1..2:12]
- │   │       │   ├─ VariableNode [2:1..2:12]
- │   │       │   │   ├─ var [2:1..2:4]: "var"
- │   │       │   │   ├─ Identifier [2:5..2:9]: "test"
- │   │       │   │   └─ ⚠ [2:10..2:11]: "="
- │   │       │   └─ ⚠ 2:12
- │   │       └─ ⚠ 2:12
- │   └─ ⚠ 2:12
- └─ CompoundStatement [2:12..3:15]
-     └─ FunctionNode [2:12..3:15]
-         ├─ func [2:12..2:16]: "func"
-         ├─ ⚠ 2:17
-         ├─ CallParams [2:17..2:19]
-         │   ├─ ( [2:17..2:18]: "("
-         │   └─ ) [2:18..2:19]: ")"
-         └─ Body [2:19..3:15]
-             ├─ : [2:19..2:20]: ":"
-             └─ CallExpressionNode [3:2..3:15]
-                 ├─ Identifier [3:2..3:7]: "print"
-                 └─ CallParams [3:7..3:15]
-                     ├─ ( [3:7..3:8]: "("
-                     ├─ LiteralExpressionNode [3:8..3:14]
-                     │   └─ String [3:8..3:14]: "\"help\""
-                     └─ ) [3:14..3:15]: ")"
+ └─ CompoundStatement [1:0..4:0]
+     └─ FunctionNode [1:0..4:0]
+         ├─ func [1:0..1:4]: "func"
+         ├─ Identifier [1:5..1:11]: "_ready"
+         ├─ CallParamsParameterNode [1:11..1:13]
+         │   ├─ ( [1:11..1:12]: "("
+         │   └─ ) [1:12..1:13]: ")"
+         ├─ FunctionReturnType [1:14..1:21]
+         │   ├─ FunctionReturnPointer [1:14..1:16]: "->"
+         │   └─ Type [1:17..1:21]
+         │       └─ Identifier [1:17..1:21]: "void"
+         └─ Body [1:21..4:0]
+             ├─ : [1:21..1:22]: ":"
+             └─ SuiteNodeBody [1:22..4:0]
+                 ├─ Newline [1:22..2:0]: "\n"
+                 └─ SuiteNode [2:0..4:0]
+                     ├─ Indent [2:0..2:1]: "\t"
+                     ├─ SimpleStatement [2:1..4:0]
+                     │   ├─ SmallStatement [2:1..4:0]
+                     │   │   └─ AssignmentExpressionNode [2:1..4:0]
+                     │   │       ├─ VariableNode [2:1..2:9]
+                     │   │       │   ├─ var [2:1..2:4]: "var"
+                     │   │       │   └─ Identifier [2:5..2:9]: "test"
+                     │   │       ├─ Equal [2:10..2:11]: "="
+                     │   │       └─ LambdaExpressionNode [2:12..4:0]
+                     │   │           ├─ func [2:12..2:16]: "func"
+                     │   │           ├─ CallParamsParameterNode [2:17..2:19]
+                     │   │           │   ├─ ( [2:17..2:18]: "("
+                     │   │           │   └─ ) [2:18..2:19]: ")"
+                     │   │           └─ Body [2:19..4:0]
+                     │   │               ├─ : [2:19..2:20]: ":"
+                     │   │               └─ SuiteNodeBody [2:20..4:0]
+                     │   │                   ├─ Newline [2:20..3:0]: "\n"
+                     │   │                   └─ SuiteNode [3:0..4:0]
+                     │   │                       ├─ Indent [3:0..3:2]: "\t\t"
+                     │   │                       ├─ SimpleStatement [3:2..4:0]
+                     │   │                       │   ├─ SmallStatement [3:2..3:15]
+                     │   │                       │   │   └─ CallExpressionNode [3:2..3:15]
+                     │   │                       │   │       ├─ Identifier [3:2..3:7]: "print"
+                     │   │                       │   │       └─ CallParamsExpressionNode [3:7..3:15]
+                     │   │                       │   │           ├─ ( [3:7..3:8]: "("
+                     │   │                       │   │           ├─ ⚠ [3:8..3:14]: "\"help\""
+                     │   │                       │   │           └─ ) [3:14..3:15]: ")"
+                     │   │                       │   └─ Newline [3:15..4:0]: "\n"
+                     │   │                       └─ Dedent 4:0
+                     │   └─ Eof 4:0
+                     └─ Dedent 4:0

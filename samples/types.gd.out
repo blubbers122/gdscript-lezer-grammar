@@ -1,0 +1,38 @@
+Script [1:0..4:15]
+ ├─ SimpleStatement [1:0..2:0]
+ │   ├─ SmallStatement [1:0..1:14]
+ │   │   └─ AssignmentExpressionNode [1:0..1:14]
+ │   │       ├─ VariableNode [1:0..1:10]
+ │   │       │   ├─ var [1:0..1:3]: "var"
+ │   │       │   ├─ Identifier [1:4..1:5]: "i"
+ │   │       │   └─ TypeCast [1:5..1:10]
+ │   │       │       ├─ : [1:5..1:6]: ":"
+ │   │       │       └─ Type [1:7..1:10]
+ │   │       │           └─ Identifier [1:7..1:10]: "int"
+ │   │       ├─ Equal [1:11..1:12]: "="
+ │   │       └─ LiteralExpressionNode [1:13..1:14]: "0"
+ │   └─ Newline [1:14..2:0]: "\n"
+ ├─ SimpleStatement [2:0..3:0]
+ │   ├─ SmallStatement [2:0..2:12]
+ │   │   └─ AssignmentExpressionNode [2:0..2:12]
+ │   │       ├─ VariableNode [2:0..2:12]
+ │   │       │   ├─ var [2:0..2:3]: "var"
+ │   │       │   ├─ Identifier [2:4..2:5]: "f"
+ │   │       │   └─ TypeCast [2:5..2:12]
+ │   │       │       ├─ : [2:5..2:6]: ":"
+ │   │       │       └─ Type [2:7..2:12]
+ │   │       │           └─ Identifier [2:7..2:12]: "float"
+ │   │       └─ ⚠ 2:12
+ │   └─ Newline [2:12..3:0]: "\n"
+ └─ SimpleStatement [4:0..4:15]
+     ├─ SmallStatement [4:0..4:15]
+     │   └─ AssignmentExpressionNode [4:0..4:15]
+     │       ├─ VariableNode [4:0..4:15]
+     │       │   ├─ var [4:0..4:3]: "var"
+     │       │   ├─ Identifier [4:4..4:7]: "abc"
+     │       │   └─ TypeCast [4:7..4:15]
+     │       │       ├─ : [4:7..4:8]: ":"
+     │       │       └─ Type [4:9..4:15]
+     │       │           └─ Identifier [4:9..4:15]: "String"
+     │       └─ ⚠ 4:15
+     └─ ⚠ 4:15

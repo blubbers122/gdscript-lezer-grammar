@@ -1,7 +1,9 @@
 Script [1:0..2:0]
- └─ CompoundStatement [1:0..2:0]
-     └─ IdentifierExpressionNode [1:0..1:5]
-         ├─ Identifier [1:0..1:1]: "a"
-         ├─ ⚠ [1:2..1:3]: "="
-         └─ ⚠ [1:4..1:5]
-             └─ Identifier [1:4..1:5]: "b"
+ └─ SimpleStatement [1:0..2:0]
+     ├─ SmallStatement [1:0..1:5]
+     │   └─ AssignmentExpressionNode [1:0..1:5]
+     │       ├─ Identifier [1:0..1:1]: "a"
+     │       ├─ Equal [1:2..1:3]: "="
+     │       └─ IdentifierExpressionNode [1:4..1:5]
+     │           └─ Identifier [1:4..1:5]: "b"
+     └─ Newline [1:5..2:0]: "\n"
